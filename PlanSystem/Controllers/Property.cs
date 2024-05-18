@@ -37,6 +37,7 @@ namespace PlanSystem.Controllers
             try
             {
                 _db.Update(property);
+                registration.Property = null;
                 _db.Update(registration);
                 _db.SaveChanges();
                 return true;
@@ -47,14 +48,14 @@ namespace PlanSystem.Controllers
             }
         }
 
-        public bool DeletePropety(int propertyId, int resgtrationId)
+        public bool DeletePropety(int resgtrationId)
         {
             try
             {
-                var prop = _db.Properties.SingleOrDefault(x => x.id ==  propertyId);
                 var reg = _db.Registration.SingleOrDefault(x => x.Id == resgtrationId);
-                _db.Registration.Remove(reg);
+                var prop = _db.Properties.SingleOrDefault(x => x.id ==  reg.PropertyId);
                 _db.Properties.Remove(prop);
+                _db.Registration.Remove(reg);
                 _db.SaveChanges();
                 return true;
             }
@@ -65,7 +66,10 @@ namespace PlanSystem.Controllers
         {
             try
             {
-                return _db.Registration.Include(x => x.Property).ToList();
+                return [.. _db.Registration
+                    .Include(x => x.Property)
+                    .Include(x => x.Type)
+                    .Include(x => x.Category)];
             }
             catch (Exception)
             {

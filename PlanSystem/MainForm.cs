@@ -1,13 +1,7 @@
 ﻿using DevExpress.XtraBars;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using DevExpress.XtraPrinting.Preview;
+using DevExpress.XtraRichEdit.Model;
+using PlanSystem.Entity;
 
 namespace PlanSystem
 {
@@ -20,9 +14,133 @@ namespace PlanSystem
 
         private void btnNew_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Forms.AddProperty property = new();
-            property.ShowDialog();
-            property.Dispose();
+            if (!Defaults.LoggedInUser.IsReadonly)
+            {
+                Forms.AddProperty property = new();
+                property.ShowDialog();
+                property.Dispose();
+            }
+            else
+            {
+                Defaults.WarningMessageBox("تاسو د تغیراتو اجازه نه لرئ");
+            }
+        }
+
+        private void btnUpdate_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Defaults.LoggedInUser.IsReadonly)
+            {
+                if (viewProperties.SelectedRowsCount > 0)
+                {
+                    RegistrationInfo regInfo = (RegistrationInfo)viewProperties.GetFocusedRow();
+                    Forms.UpdateProperty property = new(regInfo);
+                    property.ShowDialog();
+                    property.Dispose();
+                }
+            }
+            else
+            {
+                Defaults.WarningMessageBox("تاسو د تغیراتو اجازه نه لرئ");
+            }
+        }
+
+        private void btnPropertyTypes_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Defaults.LoggedInUser.IsReadonly)
+            {
+                Forms.Types type = new();
+                type.ShowDialog();
+                type.Dispose();
+            }
+            else
+            {
+                Defaults.WarningMessageBox("تاسو د تغیراتو اجازه نه لرئ");
+            }
+        }
+
+        private void btnPropertyCategories_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Defaults.LoggedInUser.IsReadonly)
+            {
+                Forms.Categories cats = new();
+                cats.ShowDialog();
+                cats.Dispose();
+            }
+            else
+            {
+                Defaults.WarningMessageBox("تاسو د تغیراتو اجازه نه لرئ");
+            }
+        }
+
+        private void btnDeleteProperty_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Defaults.LoggedInUser.IsReadonly)
+            {
+                if (viewProperties.SelectedRowsCount > 0)
+                {
+                    Controllers.Property _db = new();
+                    int id = (int)viewProperties.GetFocusedRowCellValue("Id");
+                    bool deleted = _db.DeletePropety(id);
+                    if (deleted)
+                    {
+                        Defaults.SuccessMessageBox();
+                        RefreshForm();
+                    }
+                    else
+                    {
+                        Defaults.WarningMessageBox();
+                    }
+                    _db.Dispose();
+                }
+            }
+            else
+            {
+                Defaults.WarningMessageBox("تاسو د تغیراتو اجازه نه لرئ");
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            RefreshForm();
+        }
+        void RefreshForm()
+        {
+            Controllers.Property _db = new();
+            gridProperties.DataSource = _db.GetList();
+            gridProperties.RefreshDataSource();
+            _db.Dispose();
+        }
+
+        private void btnRefresh_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            RefreshForm();
+        }
+
+        private void btnUsers_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (!Defaults.LoggedInUser.IsReadonly)
+            {
+                Forms.Users user = new Forms.Users();
+                user.ShowDialog();
+                user.Dispose();
+            }
+            else
+            {
+                Defaults.WarningMessageBox("تاسو د تغیراتو اجازه نه لرئ");
+            }
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (Defaults.YesNoMessageBox() == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

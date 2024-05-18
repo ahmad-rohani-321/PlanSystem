@@ -14,6 +14,20 @@ namespace PlanSystem
             optionsBuilder.UseSqlite(new SqliteConnection(connectionString.ConnectionString));
             base.OnConfiguring(optionsBuilder);
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Users>()
+                .HasData(
+                new Users()
+                {
+                    Id = 1,
+                    IsReadonly = false,
+                    UserName = "admin",
+                    Password = "123"
+                }
+                );
+            base.OnModelCreating(modelBuilder);
+        }
         public DbSet<Users> Users { get; set; }
         public DbSet<PropertyCategories> Categories { get; set; }
         public DbSet<PropertyType> Types { get; set; }

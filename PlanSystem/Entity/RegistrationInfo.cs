@@ -23,7 +23,7 @@ namespace PlanSystem.Entity
         public int Tax { get; set; }
         public int PlanNo { get; set; }
         public int AwazNo { get; set; }
-
+        public DateTime CreationDate { get; set; } = DateTime.Now;
         // references
         [ForeignKey(nameof(CategoryId))]
         public PropertyCategories Category { get; set; }

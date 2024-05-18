@@ -1,48 +1,49 @@
 ﻿using DevExpress.XtraEditors;
+using PlanSystem.Entity;
 
 namespace PlanSystem.Forms
 {
-    public partial class AddProperty : XtraForm
+    public partial class UpdateProperty : XtraForm
     {
         private readonly Controllers.Property _prop;
         private readonly Controllers.Settings _settings;
-        public AddProperty()
+        private readonly RegistrationInfo _registrationInfo;
+        public UpdateProperty(RegistrationInfo info)
         {
             InitializeComponent();
             _prop = new();
             _settings = new();
+            _registrationInfo = info;
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (Validated() && ValidatedRegistration())
             {
-                var property = new Entity.PropertyInfo()
-                {
-                    District = int.Parse(txtDistrict.Text),
-                    Gozar = int.Parse(txtGozar.Text),
-                    Block = int.Parse(txtBlock.Text),
-                    PropertyNo = int.Parse(txtPropertyNo.Text),
-                    Unit = int.Parse(txtUnit.Text),
-                    Remarks = txtRemarks.Text
-                };
-                var registration = new Entity.RegistrationInfo()
-                {
-                    CategoryId = (int)txtCategory.EditValue,
-                    TypeId = (int)txtPropertyType.EditValue,
-                    AwazNo = int.Parse(txtAwazeNo.Text),
-                    Floars = int.Parse(txtFloorNums.Text),
-                    MapVisa = txtMapWaze.Text,
-                    Percentage = int.Parse(txtTaxPercentage.Text),
-                    PlanNo = int.Parse(txtPlanNo.Text),
-                    SquareMeter = float.Parse(txtSquareMeter.Text),
-                    Tax = int.Parse(txtTax.Text),
-                };
-                bool added = _prop.AddProperty(property, registration);
-                if (added)
+
+                _registrationInfo.Property.District = int.Parse(txtDistrict.Text);
+                _registrationInfo.Property.Gozar = int.Parse(txtGozar.Text);
+                _registrationInfo.Property.Block = int.Parse(txtBlock.Text);
+                _registrationInfo.Property.PropertyNo = int.Parse(txtPropertyNo.Text);
+                _registrationInfo.Property.Unit = int.Parse(txtUnit.Text);
+                _registrationInfo.Property.Remarks = txtRemarks.Text;
+
+
+                _registrationInfo.CategoryId = (int)txtCategory.EditValue;
+                _registrationInfo.TypeId = (int)txtPropertyType.EditValue;
+                _registrationInfo.AwazNo = int.Parse(txtAwazeNo.Text);
+                _registrationInfo.Floars = int.Parse(txtFloorNums.Text);
+                _registrationInfo.  MapVisa = txtMapWaze.Text;
+                _registrationInfo.Percentage = int.Parse(txtTaxPercentage.Text);
+                _registrationInfo.PlanNo = int.Parse(txtPlanNo.Text);
+                _registrationInfo.SquareMeter = float.Parse(txtSquareMeter.Text);
+                _registrationInfo.Tax = int.Parse(txtTax.Text);
+
+                bool updated = _prop.UpdatePropety(_registrationInfo.Property, _registrationInfo);
+                if (updated)
                 {
                     Defaults.SuccessMessageBox();
-                    ClearForm();
+                    Close();
                 }
                 else
                 {
@@ -51,25 +52,6 @@ namespace PlanSystem.Forms
             }
         }
 
-        private void ClearForm()
-        {
-            txtCategory.EditValue = null;
-            txtPropertyType.EditValue = null;
-            txtAwazeNo.Text = 0.ToString();
-            txtFloorNums.Text = 0.ToString();
-            txtTax.Text = 0.ToString();
-            txtTaxPercentage.Text = 0.ToString();
-            txtSquareMeter.Text = 0.ToString();
-            txtMapWaze.Text = string.Empty;
-
-
-            txtDistrict.Text = 0.ToString();
-            txtGozar.Text = 0.ToString();
-            txtBlock.Text = 0.ToString();
-            txtPropertyNo.Text = 0.ToString();
-            txtUnit.Text = 0.ToString();
-            txtRemarks.Text = string.Empty;
-        }
 
         private new bool Validated()
         {
@@ -179,11 +161,6 @@ namespace PlanSystem.Forms
                 txtTax.ErrorText = "";
             }
             return result;
-        }
-
-        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            ClearForm();
         }
 
         private void AddProperty_Load(object sender, EventArgs e)

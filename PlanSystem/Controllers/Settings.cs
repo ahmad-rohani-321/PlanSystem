@@ -14,12 +14,13 @@ namespace PlanSystem.Controllers
         {
             _db = new MainDbContext();
         }
+
         #region Property Types
-        public bool AddTypes(PropertyType type)
+        public bool AddTypes(string name)
         {
             try
             {
-                _db.Types.Add(type);
+                _db.Types.Add(new() { Name = name });
                 _db.SaveChanges();
                 return true;
             }
@@ -54,12 +55,12 @@ namespace PlanSystem.Controllers
         }
         #endregion
 
-        #region Categires
-        public bool AddCategory(PropertyCategories cat)
+        #region Categories
+        public bool AddCategory(string name)
         {
             try
             {
-                _db.Categories.Add(cat);
+                _db.Categories.Add(new() { Name = name });
                 _db.SaveChanges();
                 return true;
             }
@@ -93,6 +94,7 @@ namespace PlanSystem.Controllers
             }
         }
         #endregion
+
         public void Dispose()
         {
             _db.Dispose();

@@ -1,6 +1,6 @@
 ﻿namespace PlanSystem.Forms
 {
-    partial class AddProperty
+    partial class UpdateProperty
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,6 @@
             barManager1 = new DevExpress.XtraBars.BarManager(components);
             bar2 = new DevExpress.XtraBars.Bar();
             barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -129,7 +128,7 @@
             barManager1.DockControls.Add(barDockControlLeft);
             barManager1.DockControls.Add(barDockControlRight);
             barManager1.Form = this;
-            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { barButtonItem1, barButtonItem2 });
+            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { barButtonItem1 });
             barManager1.MainMenu = bar2;
             barManager1.MaxItemId = 2;
             // 
@@ -139,7 +138,7 @@
             bar2.DockCol = 0;
             bar2.DockRow = 0;
             bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(barButtonItem1), new DevExpress.XtraBars.LinkPersistInfo(barButtonItem2) });
+            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(barButtonItem1) });
             bar2.OptionsBar.AllowQuickCustomization = false;
             bar2.OptionsBar.DrawBorder = false;
             bar2.OptionsBar.MultiLine = true;
@@ -153,14 +152,6 @@
             barButtonItem1.Name = "barButtonItem1";
             barButtonItem1.Size = new Size(50, 0);
             barButtonItem1.ItemClick += barButtonItem1_ItemClick;
-            // 
-            // barButtonItem2
-            // 
-            barButtonItem2.Caption = "دسره کول";
-            barButtonItem2.Id = 1;
-            barButtonItem2.Name = "barButtonItem2";
-            barButtonItem2.Size = new Size(70, 0);
-            barButtonItem2.ItemClick += barButtonItem2_ItemClick;
             // 
             // barDockControlTop
             // 
@@ -225,52 +216,36 @@
             // 
             // txtAwazeNo
             // 
-            txtAwazeNo.EditValue = "0";
             txtAwazeNo.Location = new Point(368, 346);
             txtAwazeNo.MenuManager = barManager1;
             txtAwazeNo.Name = "txtAwazeNo";
-            txtAwazeNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            txtAwazeNo.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
-            txtAwazeNo.Properties.MaskSettings.Set("mask", "d");
             txtAwazeNo.Size = new Size(285, 28);
             txtAwazeNo.StyleController = layoutControl1;
             txtAwazeNo.TabIndex = 15;
             // 
             // txtPlanNo
             // 
-            txtPlanNo.EditValue = "0";
             txtPlanNo.Location = new Point(29, 314);
             txtPlanNo.MenuManager = barManager1;
             txtPlanNo.Name = "txtPlanNo";
-            txtPlanNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            txtPlanNo.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
-            txtPlanNo.Properties.MaskSettings.Set("mask", "d");
             txtPlanNo.Size = new Size(211, 28);
             txtPlanNo.StyleController = layoutControl1;
             txtPlanNo.TabIndex = 14;
             // 
             // txtTax
             // 
-            txtTax.EditValue = "0";
             txtTax.Location = new Point(368, 314);
             txtTax.MenuManager = barManager1;
             txtTax.Name = "txtTax";
-            txtTax.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            txtTax.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
-            txtTax.Properties.MaskSettings.Set("mask", "d");
             txtTax.Size = new Size(305, 28);
             txtTax.StyleController = layoutControl1;
             txtTax.TabIndex = 13;
             // 
             // txtTaxPercentage
             // 
-            txtTaxPercentage.EditValue = "0";
             txtTaxPercentage.Location = new Point(29, 282);
             txtTaxPercentage.MenuManager = barManager1;
             txtTaxPercentage.Name = "txtTaxPercentage";
-            txtTaxPercentage.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            txtTaxPercentage.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
-            txtTaxPercentage.Properties.MaskSettings.Set("mask", "f");
             txtTaxPercentage.Size = new Size(258, 28);
             txtTaxPercentage.StyleController = layoutControl1;
             txtTaxPercentage.TabIndex = 12;
@@ -286,26 +261,18 @@
             // 
             // txtSquareMeter
             // 
-            txtSquareMeter.EditValue = "0";
             txtSquareMeter.Location = new Point(29, 250);
             txtSquareMeter.MenuManager = barManager1;
             txtSquareMeter.Name = "txtSquareMeter";
-            txtSquareMeter.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            txtSquareMeter.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
-            txtSquareMeter.Properties.MaskSettings.Set("mask", "f");
             txtSquareMeter.Size = new Size(277, 28);
             txtSquareMeter.StyleController = layoutControl1;
             txtSquareMeter.TabIndex = 10;
             // 
             // txtFloorNums
             // 
-            txtFloorNums.EditValue = "0";
             txtFloorNums.Location = new Point(368, 250);
             txtFloorNums.MenuManager = barManager1;
             txtFloorNums.Name = "txtFloorNums";
-            txtFloorNums.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            txtFloorNums.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
-            txtFloorNums.Properties.MaskSettings.Set("mask", "d");
             txtFloorNums.Size = new Size(256, 28);
             txtFloorNums.StyleController = layoutControl1;
             txtFloorNums.TabIndex = 9;
@@ -674,7 +641,7 @@
             layoutControlItem12.TextSize = new Size(31, 19);
             layoutControlItem12.TextToControlDistance = 5;
             // 
-            // AddProperty
+            // UpdateProperty
             // 
             Appearance.Options.UseFont = true;
             AutoScaleMode = AutoScaleMode.None;
@@ -686,10 +653,10 @@
             Controls.Add(barDockControlTop);
             Margin = new Padding(4);
             MaximizeBox = false;
-            Name = "AddProperty";
+            Name = "UpdateProperty";
             RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "نوی ملکیت";
+            Text = "ملکیت تغیرول";
             FormClosing += AddProperty_FormClosing;
             Load += AddProperty_Load;
             ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
@@ -741,7 +708,6 @@
         private DevExpress.XtraBars.BarManager barManager1;
         private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;

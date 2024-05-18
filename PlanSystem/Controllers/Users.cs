@@ -13,14 +13,30 @@ namespace PlanSystem.Controllers
         {
             _db = new MainDbContext();
         }
-
-        public bool AddUser(string username, string password)
+        public byte Login(string username, string password)
+        {
+            try
+            {
+                var user = _db.Users.FirstOrDefault(x => x.UserName == username && x.Password == password);
+                if (user != null)
+                {
+                    Defaults.LoggedInUser = user;
+                    return 0;
+                }
+                return 1;
+            }
+            catch (Exception)
+            {
+                return 2;
+            }
+        }
+        public bool AddUser(string username, string password, bool isReadOnly)
         {
             try
             {
                 var user = new Entity.Users()
                 {
-                    IsReadonly = true,
+                    IsReadonly = isReadOnly,
                     Password = password,
                     UserName = username,
                 };
@@ -59,6 +75,17 @@ namespace PlanSystem.Controllers
             catch (Exception)
             {
                 return false;
+            }
+        }
+        public List<Entity.Users> GetList()
+        {
+            try
+            {
+                return _db.Users.ToList();
+            }
+            catch (Exception)
+            {
+                return null;
             }
         }
         public void Dispose()

@@ -10,14 +10,10 @@ namespace PlanSystem
         [STAThread]
         static void Main()
         {
-            if (!Directory.Exists("Database"))
-            {
-                Directory.CreateDirectory("Database");
-            }
             Thread.CurrentThread.CurrentUICulture = new("ps-AF");
             Thread.CurrentThread.CurrentCulture = new("ps-AF");
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
+            Application.Run(new Forms.LoginForm());
         }
     }
 }

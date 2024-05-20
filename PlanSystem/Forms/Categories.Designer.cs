@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Categories));
             layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             girdCategories = new DevExpress.XtraGrid.GridControl();
             viewCategories = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -187,6 +188,7 @@
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(368, 431);
             Controls.Add(layoutControl1);
+            IconOptions.Image = (Image)resources.GetObject("Categories.IconOptions.Image");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Categories";

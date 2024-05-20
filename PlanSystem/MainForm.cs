@@ -1,5 +1,9 @@
-﻿using DevExpress.XtraBars;
+﻿using DevExpress.Utils;
+using DevExpress.XtraBars;
 using DevExpress.XtraPrinting.Preview;
+using DevExpress.XtraReports;
+using DevExpress.XtraReports.ReportGeneration;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraRichEdit.Model;
 using PlanSystem.Entity;
 
@@ -141,6 +145,16 @@ namespace PlanSystem
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btnPrint_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ReportGenerationOptions options = new ReportGenerationOptions();
+            options.PrintGroupSummaryFooter = DefaultBoolean.False;
+            XtraReport report = ReportGenerator.GenerateReport(viewProperties, options, true);
+            ReportPrintTool designTool = new ReportPrintTool(report);
+            designTool.ShowPreviewDialog();
+
         }
     }
 }

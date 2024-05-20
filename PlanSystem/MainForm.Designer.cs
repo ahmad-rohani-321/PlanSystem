@@ -107,6 +107,7 @@
             btnPrint.ImageOptions.Image = (Image)resources.GetObject("btnPrint.ImageOptions.Image");
             btnPrint.Name = "btnPrint";
             btnPrint.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btnPrint.ItemClick += btnPrint_ItemClick;
             // 
             // btnUpdate
             // 
@@ -222,6 +223,7 @@
             viewProperties.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { gridColumn1, gridColumn2, gridColumn3, gridColumn4, gridColumn5, gridColumn6, gridColumn7, gridColumn16, gridColumn15, gridColumn8, gridColumn9, gridColumn10, gridColumn11, gridColumn12, gridColumn13, gridColumn14, date });
             viewProperties.GridControl = gridProperties;
             viewProperties.Name = "viewProperties";
+            viewProperties.OptionsPrint.PrintFooter = false;
             viewProperties.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1

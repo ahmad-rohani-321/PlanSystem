@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             txtUserName = new DevExpress.XtraEditors.TextEdit();
             txtPassword = new DevExpress.XtraEditors.TextEdit();
             btnLogin = new DevExpress.XtraEditors.SimpleButton();
@@ -87,8 +88,8 @@
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtUserName);
-            Font = new Font("Calibri", 12F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            IconOptions.Image = (Image)resources.GetObject("LoginForm.IconOptions.Image");
             Margin = new Padding(4);
             MaximizeBox = false;
             MaximumSize = new Size(430, 275);

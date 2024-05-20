@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
             layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            btnDelete = new DevExpress.XtraEditors.SimpleButton();
             txtIsReadOnly = new DevExpress.XtraEditors.CheckEdit();
             btnSave = new DevExpress.XtraEditors.SimpleButton();
             txtPassword = new DevExpress.XtraEditors.TextEdit();
@@ -45,7 +47,6 @@
             layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            btnDelete = new DevExpress.XtraEditors.SimpleButton();
             layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)layoutControl1).BeginInit();
@@ -82,6 +83,16 @@
             layoutControl1.Size = new Size(469, 471);
             layoutControl1.TabIndex = 0;
             layoutControl1.Text = "layoutControl1";
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(12, 103);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(108, 24);
+            btnDelete.StyleController = layoutControl1;
+            btnDelete.TabIndex = 5;
+            btnDelete.Text = "حذف";
+            btnDelete.Click += btnDelete_Click;
             // 
             // txtIsReadOnly
             // 
@@ -218,16 +229,6 @@
             layoutControlItem5.TextSize = new Size(0, 0);
             layoutControlItem5.TextVisible = false;
             // 
-            // btnDelete
-            // 
-            btnDelete.Location = new Point(12, 103);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(108, 24);
-            btnDelete.StyleController = layoutControl1;
-            btnDelete.TabIndex = 5;
-            btnDelete.Text = "حذف";
-            btnDelete.Click += btnDelete_Click;
-            // 
             // layoutControlItem6
             // 
             layoutControlItem6.Control = btnDelete;
@@ -250,6 +251,7 @@
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(469, 471);
             Controls.Add(layoutControl1);
+            IconOptions.Image = (Image)resources.GetObject("Users.IconOptions.Image");
             MaximizeBox = false;
             MaximumSize = new Size(471, 501);
             MinimizeBox = false;

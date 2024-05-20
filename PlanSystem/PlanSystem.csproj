@@ -6,6 +6,12 @@
     <Nullable>disable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Title>Property Registration System</Title>
+    <Authors>Ahmad Rohani</Authors>
+    <Product>Property Registration System</Product>
+    <PackageIcon>icons8_erp_system.ico</PackageIcon>
+    <PackAsTool>False</PackAsTool>
+    <NeutralLanguage>ps-AF</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
@@ -29,6 +35,11 @@
 
   <ItemGroup>
     <None Update="Database.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="icons8_erp_system.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

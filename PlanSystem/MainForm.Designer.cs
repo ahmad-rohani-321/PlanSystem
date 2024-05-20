@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation1 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
             ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             btnNew = new DevExpress.XtraBars.BarButtonItem();
@@ -61,6 +62,7 @@
             gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            date = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridProperties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)viewProperties).BeginInit();
@@ -84,7 +86,6 @@
             ribbon.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
             ribbon.ShowMoreCommandsButton = DevExpress.Utils.DefaultBoolean.False;
             ribbon.ShowPageHeadersInFormCaption = DevExpress.Utils.DefaultBoolean.False;
-            ribbon.ShowSearchItem = true;
             ribbon.ShowToolbarCustomizeItem = false;
             ribbon.Size = new Size(951, 171);
             ribbon.StatusBar = ribbonStatusBar;
@@ -94,6 +95,7 @@
             // 
             btnNew.Caption = "نوی ملکیت";
             btnNew.Id = 1;
+            btnNew.ImageOptions.Image = (Image)resources.GetObject("btnNew.ImageOptions.Image");
             btnNew.Name = "btnNew";
             btnNew.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btnNew.ItemClick += btnNew_ItemClick;
@@ -102,6 +104,7 @@
             // 
             btnPrint.Caption = "چاپ";
             btnPrint.Id = 2;
+            btnPrint.ImageOptions.Image = (Image)resources.GetObject("btnPrint.ImageOptions.Image");
             btnPrint.Name = "btnPrint";
             btnPrint.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
@@ -109,6 +112,7 @@
             // 
             btnUpdate.Caption = "ملکیت تغیر";
             btnUpdate.Id = 4;
+            btnUpdate.ImageOptions.Image = (Image)resources.GetObject("btnUpdate.ImageOptions.Image");
             btnUpdate.Name = "btnUpdate";
             btnUpdate.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btnUpdate.ItemClick += btnUpdate_ItemClick;
@@ -117,6 +121,7 @@
             // 
             btnPropertyTypes.Caption = "ملکیت سیمي ډولونه";
             btnPropertyTypes.Id = 9;
+            btnPropertyTypes.ImageOptions.Image = (Image)resources.GetObject("btnPropertyTypes.ImageOptions.Image");
             btnPropertyTypes.Name = "btnPropertyTypes";
             btnPropertyTypes.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btnPropertyTypes.ItemClick += btnPropertyTypes_ItemClick;
@@ -125,6 +130,7 @@
             // 
             btnPropertyCategories.Caption = "ملکیت کټیګوري";
             btnPropertyCategories.Id = 10;
+            btnPropertyCategories.ImageOptions.Image = (Image)resources.GetObject("btnPropertyCategories.ImageOptions.Image");
             btnPropertyCategories.Name = "btnPropertyCategories";
             btnPropertyCategories.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btnPropertyCategories.ItemClick += btnPropertyCategories_ItemClick;
@@ -133,6 +139,7 @@
             // 
             btnDeleteProperty.Caption = "ملکیت حذف";
             btnDeleteProperty.Id = 11;
+            btnDeleteProperty.ImageOptions.Image = (Image)resources.GetObject("btnDeleteProperty.ImageOptions.Image");
             btnDeleteProperty.Name = "btnDeleteProperty";
             btnDeleteProperty.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btnDeleteProperty.ItemClick += btnDeleteProperty_ItemClick;
@@ -141,6 +148,7 @@
             // 
             btnRefresh.Caption = "صفحه تازه کول";
             btnRefresh.Id = 12;
+            btnRefresh.ImageOptions.Image = (Image)resources.GetObject("btnRefresh.ImageOptions.Image");
             btnRefresh.Name = "btnRefresh";
             btnRefresh.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btnRefresh.ItemClick += btnRefresh_ItemClick;
@@ -149,6 +157,7 @@
             // 
             btnUsers.Caption = "یوزران";
             btnUsers.Id = 13;
+            btnUsers.ImageOptions.Image = (Image)resources.GetObject("btnUsers.ImageOptions.Image");
             btnUsers.Name = "btnUsers";
             btnUsers.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btnUsers.ItemClick += btnUsers_ItemClick;
@@ -210,7 +219,7 @@
             // 
             // viewProperties
             // 
-            viewProperties.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { gridColumn1, gridColumn2, gridColumn3, gridColumn4, gridColumn5, gridColumn6, gridColumn7, gridColumn16, gridColumn15, gridColumn8, gridColumn9, gridColumn10, gridColumn11, gridColumn12, gridColumn13, gridColumn14 });
+            viewProperties.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] { gridColumn1, gridColumn2, gridColumn3, gridColumn4, gridColumn5, gridColumn6, gridColumn7, gridColumn16, gridColumn15, gridColumn8, gridColumn9, gridColumn10, gridColumn11, gridColumn12, gridColumn13, gridColumn14, date });
             viewProperties.GridControl = gridProperties;
             viewProperties.Name = "viewProperties";
             viewProperties.OptionsView.ShowGroupPanel = false;
@@ -221,7 +230,7 @@
             gridColumn1.FieldName = "Property.Gozar";
             gridColumn1.Name = "gridColumn1";
             gridColumn1.Visible = true;
-            gridColumn1.VisibleIndex = 1;
+            gridColumn1.VisibleIndex = 2;
             // 
             // gridColumn2
             // 
@@ -229,7 +238,7 @@
             gridColumn2.FieldName = "Property.District";
             gridColumn2.Name = "gridColumn2";
             gridColumn2.Visible = true;
-            gridColumn2.VisibleIndex = 0;
+            gridColumn2.VisibleIndex = 1;
             // 
             // gridColumn3
             // 
@@ -243,7 +252,7 @@
             gridColumn4.FieldName = "Property.Block";
             gridColumn4.Name = "gridColumn4";
             gridColumn4.Visible = true;
-            gridColumn4.VisibleIndex = 2;
+            gridColumn4.VisibleIndex = 3;
             // 
             // gridColumn5
             // 
@@ -251,7 +260,7 @@
             gridColumn5.FieldName = "Property.PropertyNo";
             gridColumn5.Name = "gridColumn5";
             gridColumn5.Visible = true;
-            gridColumn5.VisibleIndex = 3;
+            gridColumn5.VisibleIndex = 4;
             // 
             // gridColumn6
             // 
@@ -259,7 +268,7 @@
             gridColumn6.FieldName = "Property.Unit";
             gridColumn6.Name = "gridColumn6";
             gridColumn6.Visible = true;
-            gridColumn6.VisibleIndex = 4;
+            gridColumn6.VisibleIndex = 5;
             // 
             // gridColumn7
             // 
@@ -267,7 +276,7 @@
             gridColumn7.FieldName = "Property.Remarks";
             gridColumn7.Name = "gridColumn7";
             gridColumn7.Visible = true;
-            gridColumn7.VisibleIndex = 5;
+            gridColumn7.VisibleIndex = 6;
             // 
             // gridColumn16
             // 
@@ -275,7 +284,7 @@
             gridColumn16.FieldName = "Category.Name";
             gridColumn16.Name = "gridColumn16";
             gridColumn16.Visible = true;
-            gridColumn16.VisibleIndex = 7;
+            gridColumn16.VisibleIndex = 8;
             // 
             // gridColumn15
             // 
@@ -283,7 +292,7 @@
             gridColumn15.FieldName = "Type.Name";
             gridColumn15.Name = "gridColumn15";
             gridColumn15.Visible = true;
-            gridColumn15.VisibleIndex = 9;
+            gridColumn15.VisibleIndex = 10;
             // 
             // gridColumn8
             // 
@@ -291,7 +300,7 @@
             gridColumn8.FieldName = "Floars";
             gridColumn8.Name = "gridColumn8";
             gridColumn8.Visible = true;
-            gridColumn8.VisibleIndex = 6;
+            gridColumn8.VisibleIndex = 7;
             // 
             // gridColumn9
             // 
@@ -299,7 +308,7 @@
             gridColumn9.FieldName = "SquareMeter";
             gridColumn9.Name = "gridColumn9";
             gridColumn9.Visible = true;
-            gridColumn9.VisibleIndex = 8;
+            gridColumn9.VisibleIndex = 9;
             // 
             // gridColumn10
             // 
@@ -307,7 +316,7 @@
             gridColumn10.FieldName = "MapVisa";
             gridColumn10.Name = "gridColumn10";
             gridColumn10.Visible = true;
-            gridColumn10.VisibleIndex = 10;
+            gridColumn10.VisibleIndex = 11;
             // 
             // gridColumn11
             // 
@@ -315,7 +324,7 @@
             gridColumn11.FieldName = "Percentage";
             gridColumn11.Name = "gridColumn11";
             gridColumn11.Visible = true;
-            gridColumn11.VisibleIndex = 11;
+            gridColumn11.VisibleIndex = 12;
             // 
             // gridColumn12
             // 
@@ -323,7 +332,7 @@
             gridColumn12.FieldName = "Tax";
             gridColumn12.Name = "gridColumn12";
             gridColumn12.Visible = true;
-            gridColumn12.VisibleIndex = 12;
+            gridColumn12.VisibleIndex = 13;
             // 
             // gridColumn13
             // 
@@ -331,7 +340,7 @@
             gridColumn13.FieldName = "PlanNo";
             gridColumn13.Name = "gridColumn13";
             gridColumn13.Visible = true;
-            gridColumn13.VisibleIndex = 13;
+            gridColumn13.VisibleIndex = 14;
             // 
             // gridColumn14
             // 
@@ -339,7 +348,15 @@
             gridColumn14.FieldName = "AwazNo";
             gridColumn14.Name = "gridColumn14";
             gridColumn14.Visible = true;
-            gridColumn14.VisibleIndex = 14;
+            gridColumn14.VisibleIndex = 15;
+            // 
+            // date
+            // 
+            date.Caption = "نېټه";
+            date.FieldName = "CreationDate";
+            date.Name = "date";
+            date.Visible = true;
+            date.VisibleIndex = 0;
             // 
             // MainForm
             // 
@@ -351,6 +368,7 @@
             Controls.Add(ribbonStatusBar);
             Controls.Add(ribbon);
             Font = new Font("Calibri", 8.25F);
+            IconOptions.Image = (Image)resources.GetObject("MainForm.IconOptions.Image");
             Name = "MainForm";
             Ribbon = ribbon;
             RightToLeft = RightToLeft.Yes;
@@ -402,5 +420,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraBars.BarButtonItem btnRefresh;
         private DevExpress.XtraBars.BarButtonItem btnUsers;
+        private DevExpress.XtraGrid.Columns.GridColumn date;
     }
 }

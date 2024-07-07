@@ -39,6 +39,7 @@
             btnDeleteProperty = new DevExpress.XtraBars.BarButtonItem();
             btnRefresh = new DevExpress.XtraBars.BarButtonItem();
             btnUsers = new DevExpress.XtraBars.BarButtonItem();
+            btnBackup = new DevExpress.XtraBars.BarButtonItem();
             ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
@@ -75,9 +76,9 @@
             ribbon.DrawGroupsBorderMode = DevExpress.Utils.DefaultBoolean.False;
             ribbon.ExpandCollapseItem.Id = 0;
             ribbon.ItemPanelStyle = DevExpress.XtraBars.Ribbon.RibbonItemPanelStyle.Skin;
-            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, ribbon.SearchEditItem, btnNew, btnPrint, btnUpdate, btnPropertyTypes, btnPropertyCategories, btnDeleteProperty, btnRefresh, btnUsers });
+            ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbon.ExpandCollapseItem, ribbon.SearchEditItem, btnNew, btnPrint, btnUpdate, btnPropertyTypes, btnPropertyCategories, btnDeleteProperty, btnRefresh, btnUsers, btnBackup });
             ribbon.Location = new Point(0, 0);
-            ribbon.MaxItemId = 14;
+            ribbon.MaxItemId = 15;
             ribbon.Name = "ribbon";
             ribbon.OptionsStubGlyphs.CornerRadius = 1;
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage1 });
@@ -163,6 +164,15 @@
             btnUsers.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             btnUsers.ItemClick += btnUsers_ItemClick;
             // 
+            // btnBackup
+            // 
+            btnBackup.Caption = "بک آپ";
+            btnBackup.Id = 14;
+            btnBackup.ImageOptions.Image = (Image)resources.GetObject("btnBackup.ImageOptions.Image");
+            btnBackup.Name = "btnBackup";
+            btnBackup.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btnBackup.ItemClick += btnBackup_ItemClick;
+            // 
             // ribbonPage1
             // 
             ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1 });
@@ -185,6 +195,7 @@
             ribbonPageGroup1.ItemLinks.Add(btnDeleteProperty);
             ribbonPageGroup1.ItemLinks.Add(btnUsers);
             ribbonPageGroup1.ItemLinks.Add(btnRefresh);
+            ribbonPageGroup1.ItemLinks.Add(btnBackup);
             ribbonPageGroup1.Name = "ribbonPageGroup1";
             ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
@@ -423,5 +434,6 @@
         private DevExpress.XtraBars.BarButtonItem btnRefresh;
         private DevExpress.XtraBars.BarButtonItem btnUsers;
         private DevExpress.XtraGrid.Columns.GridColumn date;
+        private DevExpress.XtraBars.BarButtonItem btnBackup;
     }
 }

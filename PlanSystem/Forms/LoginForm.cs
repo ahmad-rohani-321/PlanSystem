@@ -1,13 +1,6 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DevExpress.XtraSplashScreen;
+using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace PlanSystem.Forms
 {
@@ -30,7 +23,7 @@ namespace PlanSystem.Forms
                     Hide();
                     form.ShowDialog();
                 }
-                else if(result == 1) 
+                else if (result == 1)
                 {
                     Defaults.WarningMessageBox("یوزر نه سو پیدا");
                 }
@@ -40,6 +33,19 @@ namespace PlanSystem.Forms
                 }
             }
             user.Dispose();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            if (!File.Exists("Database.db"))
+            {
+                MainDbContext db = new MainDbContext();
+                db.Database.Migrate();
+                if (db.Database.EnsureCreated())
+                {
+                    Defaults.SuccessMessageBox();
+                }
+            }
         }
     }
 }

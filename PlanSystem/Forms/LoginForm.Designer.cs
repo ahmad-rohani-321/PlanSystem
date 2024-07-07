@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, null, true, true);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             txtUserName = new DevExpress.XtraEditors.TextEdit();
             txtPassword = new DevExpress.XtraEditors.TextEdit();
@@ -78,6 +79,10 @@
             labelControl2.TabIndex = 4;
             labelControl2.Text = "پاسورډ";
             // 
+            // splashScreenManager1
+            // 
+            splashScreenManager1.ClosingDelay = 500;
+            // 
             // LoginForm
             // 
             Appearance.Options.UseFont = true;
@@ -88,6 +93,7 @@
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtUserName);
+            Font = new Font("Calibri", 12F);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             IconOptions.Image = (Image)resources.GetObject("LoginForm.IconOptions.Image");
             Margin = new Padding(4);
@@ -98,6 +104,7 @@
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "داخلېدل";
+            Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)txtUserName.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtPassword.Properties).EndInit();
             ResumeLayout(false);

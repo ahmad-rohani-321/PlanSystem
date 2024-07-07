@@ -6,6 +6,7 @@ using DevExpress.XtraReports.ReportGeneration;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraRichEdit.Model;
 using PlanSystem.Entity;
+using System.IO;
 
 namespace PlanSystem
 {
@@ -78,28 +79,25 @@ namespace PlanSystem
 
         private void btnDeleteProperty_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (!Defaults.LoggedInUser.IsReadonly)
-            {
-                if (viewProperties.SelectedRowsCount > 0)
-                {
-                    Controllers.Property _db = new();
-                    int id = (int)viewProperties.GetFocusedRowCellValue("Id");
-                    bool deleted = _db.DeletePropety(id);
-                    if (deleted)
-                    {
-                        Defaults.SuccessMessageBox();
-                        RefreshForm();
-                    }
-                    else
-                    {
-                        Defaults.WarningMessageBox();
-                    }
-                    _db.Dispose();
-                }
-            }
-            else
+            if (Defaults.LoggedInUser.IsReadonly)
             {
                 Defaults.WarningMessageBox("تاسو د تغیراتو اجازه نه لرئ");
+            }
+            else if (viewProperties.SelectedRowsCount > 0 && Defaults.YesNoMessageBox() == DialogResult.Yes)
+            {
+                Controllers.Property _db = new();
+                int id = (int)viewProperties.GetFocusedRowCellValue("Id");
+                bool deleted = _db.DeletePropety(id);
+                if (deleted)
+                {
+                    Defaults.SuccessMessageBox();
+                    RefreshForm();
+                }
+                else
+                {
+                    Defaults.WarningMessageBox();
+                }
+                _db.Dispose();
             }
         }
 
@@ -154,7 +152,25 @@ namespace PlanSystem
             XtraReport report = ReportGenerator.GenerateReport(viewProperties, options, true);
             ReportPrintTool designTool = new ReportPrintTool(report);
             designTool.ShowPreviewDialog();
+        }
 
+        private void btnBackup_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string dbPath = @"Database.db";
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "db files (*.db)|*.db";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (!File.Exists(saveFileDialog.FileName))
+                {
+                    File.Copy(dbPath, saveFileDialog.FileName);
+                    Defaults.SuccessMessageBox();
+                }
+                else
+                {
+                    Defaults.WarningMessageBox("یو بک آپ سته");
+                }
+            }
         }
     }
 }

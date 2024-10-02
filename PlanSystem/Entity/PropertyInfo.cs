@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace PlanSystem.Entity
 {
     public class PropertyInfo
     {
         [Key]
-        public int id { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string FatherName { get; set; }
+        public string GrandFatherName { get; set; }
+        public string TazkiraNo { get; set; }
         public int District { get; set; }
         public int Gozar { get; set; }
         public int Block { get; set; }

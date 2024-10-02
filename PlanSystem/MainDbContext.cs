@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using DevExpress.XtraLayout.Customization;
 using Microsoft.EntityFrameworkCore;
 using PlanSystem.Entity;
 
@@ -8,10 +8,7 @@ namespace PlanSystem
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            SqliteConnectionStringBuilder connectionString = new SqliteConnectionStringBuilder();
-            connectionString.DataSource = @"Database.db";
-            connectionString.Password = "Secret@123Ahmad.Rohani";
-            optionsBuilder.UseSqlite(new SqliteConnection(connectionString.ConnectionString));
+            optionsBuilder.UseSqlServer(Defaults.ConnectionString);
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -26,6 +23,80 @@ namespace PlanSystem
                     Password = "123"
                 }
                 );
+
+            modelBuilder.Entity<PropertyCategories>()
+                .HasData(
+                new PropertyCategories()
+                {
+                    Id = 1,
+                    Name = "زمین"
+                },
+                new PropertyCategories()
+                {
+                    Id = 2,
+                    Name = "دیوارها"
+                },
+                new PropertyCategories()
+                {
+                    Id = 3,
+                    Name = "ساختمان"
+                },
+                new PropertyCategories()
+                {
+                    Id = 4,
+                    Name = "چاه"
+                },
+                new PropertyCategories()
+                {
+                    Id = 5,
+                    Name = "چاه بدرفت"
+                },
+                new PropertyCategories()
+                {
+                    Id = 6,
+                    Name = "پطرول پمپ"
+                },
+                new PropertyCategories()
+                {
+                    Id = 7,
+                    Name = "تعمیرات به شکل هنګر و تحویل خانه پخته کاري"
+                }
+                );
+
+            modelBuilder.Entity<PropertyType>()
+                .HasData(
+                new PropertyType()
+                {
+                    Id = 1,
+                    Name = "تجارتي"
+                },
+                new PropertyType()
+                {
+                    Id = 2,
+                    Name = "دولتي"
+                },
+                new PropertyType()
+                {
+                    Id = 3,
+                    Name = "رهایشي"
+                },
+                new PropertyType()
+                {
+                    Id = 4,
+                    Name = "صنعتي"
+                },
+                new PropertyType()
+                {
+                    Id = 5,
+                    Name = "تولیدي"
+                },
+                new PropertyType()
+                {
+                    Id = 6,
+                    Name = "عامه"
+                }
+                );
+
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<Users> Users { get; set; }

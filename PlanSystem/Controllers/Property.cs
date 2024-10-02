@@ -21,7 +21,7 @@ namespace PlanSystem.Controllers
             {
                 _db.Properties.Add(property);
                 _db.SaveChanges();
-                registration.PropertyId = property.id;
+                registration.PropertyId = property.Id;
                 _db.Registration.Add(registration);
                 _db.SaveChanges();
                 return true;
@@ -53,7 +53,7 @@ namespace PlanSystem.Controllers
             try
             {
                 var reg = _db.Registration.SingleOrDefault(x => x.Id == resgtrationId);
-                var prop = _db.Properties.SingleOrDefault(x => x.id ==  reg.PropertyId);
+                var prop = _db.Properties.SingleOrDefault(x => x.Id ==  reg.PropertyId);
                 _db.Properties.Remove(prop);
                 _db.Registration.Remove(reg);
                 _db.SaveChanges();

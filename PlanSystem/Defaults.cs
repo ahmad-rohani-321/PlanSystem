@@ -11,6 +11,28 @@ namespace PlanSystem
     internal static class Defaults
     {
         public static Users LoggedInUser { get; set; }
+        private static readonly string _connectionString = $"Server=DESKTOP-HKB55DK; Database=PlanSystem; Trusted_Connection=True; TrustServerCertificate=True";
+        public static string ConnectionString { 
+            get
+            {
+                return _connectionString;
+            }
+        }
+        public static string DbPath
+        {
+            get
+            {
+                return $@"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}\PlaSystem\";
+            }
+        }
+        public static string DbFilePath
+        {
+            get
+            {
+                return $@"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}\PlaSystem\Database.db";
+            }
+        }
+
         public static void SuccessMessageBox()
         {
             XtraMessageBox.Show("عملیه تکمیل سوه", "خبرتیا", MessageBoxButtons.OK, MessageBoxIcon.Information);

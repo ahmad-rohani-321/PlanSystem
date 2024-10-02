@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using System.IO;
+
 namespace PlanSystem
 {
     internal static class Program

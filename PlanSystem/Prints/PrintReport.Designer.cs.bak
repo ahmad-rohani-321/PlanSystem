@@ -64,7 +64,7 @@
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 20F, 61.45833F, 53.125F);
             this.PageHeight = 827;
             this.PageWidth = 1169;
-            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
+            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

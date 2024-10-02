@@ -169,15 +169,15 @@
             barDockControlTop.Dock = DockStyle.Top;
             barDockControlTop.Location = new Point(0, 0);
             barDockControlTop.Manager = barManager1;
-            barDockControlTop.Size = new Size(716, 35);
+            barDockControlTop.Size = new Size(788, 35);
             // 
             // barDockControlBottom
             // 
             barDockControlBottom.CausesValidation = false;
             barDockControlBottom.Dock = DockStyle.Bottom;
-            barDockControlBottom.Location = new Point(0, 423);
+            barDockControlBottom.Location = new Point(0, 467);
             barDockControlBottom.Manager = barManager1;
-            barDockControlBottom.Size = new Size(716, 0);
+            barDockControlBottom.Size = new Size(788, 0);
             // 
             // barDockControlLeft
             // 
@@ -185,15 +185,15 @@
             barDockControlLeft.Dock = DockStyle.Left;
             barDockControlLeft.Location = new Point(0, 35);
             barDockControlLeft.Manager = barManager1;
-            barDockControlLeft.Size = new Size(0, 388);
+            barDockControlLeft.Size = new Size(0, 432);
             // 
             // barDockControlRight
             // 
             barDockControlRight.CausesValidation = false;
             barDockControlRight.Dock = DockStyle.Right;
-            barDockControlRight.Location = new Point(716, 35);
+            barDockControlRight.Location = new Point(788, 35);
             barDockControlRight.Manager = barManager1;
-            barDockControlRight.Size = new Size(0, 388);
+            barDockControlRight.Size = new Size(0, 432);
             // 
             // layoutControl1
             // 
@@ -220,101 +220,101 @@
             layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new Rectangle(452, 253, 650, 400);
             layoutControl1.OptionsView.RightToLeftMirroringApplied = true;
             layoutControl1.Root = Root;
-            layoutControl1.Size = new Size(716, 388);
+            layoutControl1.Size = new Size(788, 432);
             layoutControl1.TabIndex = 4;
             layoutControl1.Text = "layoutControl1";
             // 
             // txtAwazeNo
             // 
             txtAwazeNo.EditValue = "0";
-            txtAwazeNo.Location = new Point(359, 348);
+            txtAwazeNo.Location = new Point(395, 392);
             txtAwazeNo.MenuManager = barManager1;
             txtAwazeNo.Name = "txtAwazeNo";
             txtAwazeNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtAwazeNo.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtAwazeNo.Properties.MaskSettings.Set("mask", "d");
-            txtAwazeNo.Size = new Size(294, 28);
+            txtAwazeNo.Size = new Size(330, 28);
             txtAwazeNo.StyleController = layoutControl1;
             txtAwazeNo.TabIndex = 15;
             // 
             // txtPlanNo
             // 
             txtPlanNo.EditValue = "0";
-            txtPlanNo.Location = new Point(12, 316);
+            txtPlanNo.Location = new Point(12, 360);
             txtPlanNo.MenuManager = barManager1;
             txtPlanNo.Name = "txtPlanNo";
             txtPlanNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtPlanNo.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtPlanNo.Properties.MaskSettings.Set("mask", "d");
-            txtPlanNo.Size = new Size(219, 28);
+            txtPlanNo.Size = new Size(255, 28);
             txtPlanNo.StyleController = layoutControl1;
             txtPlanNo.TabIndex = 14;
             // 
             // txtTax
             // 
             txtTax.EditValue = "0";
-            txtTax.Location = new Point(359, 316);
+            txtTax.Location = new Point(395, 360);
             txtTax.MenuManager = barManager1;
             txtTax.Name = "txtTax";
             txtTax.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtTax.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtTax.Properties.MaskSettings.Set("mask", "d");
-            txtTax.Size = new Size(314, 28);
+            txtTax.Size = new Size(350, 28);
             txtTax.StyleController = layoutControl1;
             txtTax.TabIndex = 13;
             // 
             // txtTaxPercentage
             // 
             txtTaxPercentage.EditValue = "0";
-            txtTaxPercentage.Location = new Point(12, 284);
+            txtTaxPercentage.Location = new Point(12, 328);
             txtTaxPercentage.MenuManager = barManager1;
             txtTaxPercentage.Name = "txtTaxPercentage";
             txtTaxPercentage.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtTaxPercentage.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtTaxPercentage.Properties.MaskSettings.Set("mask", "f");
-            txtTaxPercentage.Size = new Size(266, 28);
+            txtTaxPercentage.Size = new Size(302, 28);
             txtTaxPercentage.StyleController = layoutControl1;
             txtTaxPercentage.TabIndex = 12;
             // 
             // txtMapWaze
             // 
-            txtMapWaze.Location = new Point(359, 284);
+            txtMapWaze.Location = new Point(395, 328);
             txtMapWaze.MenuManager = barManager1;
             txtMapWaze.Name = "txtMapWaze";
-            txtMapWaze.Size = new Size(274, 28);
+            txtMapWaze.Size = new Size(310, 28);
             txtMapWaze.StyleController = layoutControl1;
             txtMapWaze.TabIndex = 11;
             // 
             // txtSquareMeter
             // 
             txtSquareMeter.EditValue = "0";
-            txtSquareMeter.Location = new Point(12, 252);
+            txtSquareMeter.Location = new Point(12, 296);
             txtSquareMeter.MenuManager = barManager1;
             txtSquareMeter.Name = "txtSquareMeter";
             txtSquareMeter.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtSquareMeter.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtSquareMeter.Properties.MaskSettings.Set("mask", "f");
-            txtSquareMeter.Size = new Size(285, 28);
+            txtSquareMeter.Size = new Size(321, 28);
             txtSquareMeter.StyleController = layoutControl1;
             txtSquareMeter.TabIndex = 10;
             // 
             // txtFloorNums
             // 
             txtFloorNums.EditValue = "0";
-            txtFloorNums.Location = new Point(359, 252);
+            txtFloorNums.Location = new Point(395, 296);
             txtFloorNums.MenuManager = barManager1;
             txtFloorNums.Name = "txtFloorNums";
             txtFloorNums.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtFloorNums.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtFloorNums.Properties.MaskSettings.Set("mask", "d");
-            txtFloorNums.Size = new Size(265, 28);
+            txtFloorNums.Size = new Size(301, 28);
             txtFloorNums.StyleController = layoutControl1;
             txtFloorNums.TabIndex = 9;
             // 
             // txtPropertyType
             // 
             txtPropertyType.EditValue = " ";
-            txtPropertyType.Location = new Point(12, 220);
+            txtPropertyType.Location = new Point(12, 264);
             txtPropertyType.MenuManager = barManager1;
             txtPropertyType.Name = "txtPropertyType";
             txtPropertyType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
@@ -322,7 +322,7 @@
             txtPropertyType.Properties.NullText = " ";
             txtPropertyType.Properties.PopupView = gridLookUpEdit2View;
             txtPropertyType.Properties.ValueMember = "Id";
-            txtPropertyType.Size = new Size(271, 28);
+            txtPropertyType.Size = new Size(307, 28);
             txtPropertyType.StyleController = layoutControl1;
             txtPropertyType.TabIndex = 8;
             // 
@@ -344,7 +344,7 @@
             // 
             // txtCategory
             // 
-            txtCategory.Location = new Point(359, 220);
+            txtCategory.Location = new Point(395, 264);
             txtCategory.MenuManager = barManager1;
             txtCategory.Name = "txtCategory";
             txtCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
@@ -352,7 +352,7 @@
             txtCategory.Properties.NullText = " ";
             txtCategory.Properties.PopupView = gridLookUpEdit1View;
             txtCategory.Properties.ValueMember = "Id";
-            txtCategory.Size = new Size(298, 28);
+            txtCategory.Size = new Size(334, 28);
             txtCategory.StyleController = layoutControl1;
             txtCategory.TabIndex = 7;
             // 
@@ -376,7 +376,7 @@
             // 
             labelControl2.Appearance.Font = new Font("Calibri", 24F);
             labelControl2.Appearance.Options.UseFont = true;
-            labelControl2.Location = new Point(428, 177);
+            labelControl2.Location = new Point(500, 221);
             labelControl2.Name = "labelControl2";
             labelControl2.Size = new Size(276, 39);
             labelControl2.StyleController = layoutControl1;
@@ -387,7 +387,7 @@
             // 
             labelControl1.Appearance.Font = new Font("Calibri", 24F);
             labelControl1.Appearance.Options.UseFont = true;
-            labelControl1.Location = new Point(529, 12);
+            labelControl1.Location = new Point(601, 12);
             labelControl1.Name = "labelControl1";
             labelControl1.Size = new Size(175, 39);
             labelControl1.StyleController = layoutControl1;
@@ -399,20 +399,20 @@
             txtRemarks.Location = new Point(12, 119);
             txtRemarks.MenuManager = barManager1;
             txtRemarks.Name = "txtRemarks";
-            txtRemarks.Size = new Size(307, 28);
+            txtRemarks.Size = new Size(343, 28);
             txtRemarks.StyleController = layoutControl1;
             txtRemarks.TabIndex = 6;
             // 
             // txtUnit
             // 
             txtUnit.EditValue = "0";
-            txtUnit.Location = new Point(359, 119);
+            txtUnit.Location = new Point(395, 119);
             txtUnit.MenuManager = barManager1;
             txtUnit.Name = "txtUnit";
             txtUnit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtUnit.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtUnit.Properties.MaskSettings.Set("mask", "d");
-            txtUnit.Size = new Size(313, 28);
+            txtUnit.Size = new Size(349, 28);
             txtUnit.StyleController = layoutControl1;
             txtUnit.TabIndex = 5;
             // 
@@ -425,20 +425,20 @@
             txtPropertyNo.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtPropertyNo.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtPropertyNo.Properties.MaskSettings.Set("mask", "d");
-            txtPropertyNo.Size = new Size(267, 28);
+            txtPropertyNo.Size = new Size(303, 28);
             txtPropertyNo.StyleController = layoutControl1;
             txtPropertyNo.TabIndex = 4;
             // 
             // txtBlock
             // 
             txtBlock.EditValue = "0";
-            txtBlock.Location = new Point(359, 87);
+            txtBlock.Location = new Point(395, 87);
             txtBlock.MenuManager = barManager1;
             txtBlock.Name = "txtBlock";
             txtBlock.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtBlock.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtBlock.Properties.MaskSettings.Set("mask", "d");
-            txtBlock.Size = new Size(312, 28);
+            txtBlock.Size = new Size(348, 28);
             txtBlock.StyleController = layoutControl1;
             txtBlock.TabIndex = 3;
             // 
@@ -451,20 +451,20 @@
             txtGozar.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtGozar.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtGozar.Properties.MaskSettings.Set("mask", "d");
-            txtGozar.Size = new Size(316, 28);
+            txtGozar.Size = new Size(352, 28);
             txtGozar.StyleController = layoutControl1;
             txtGozar.TabIndex = 2;
             // 
             // txtDistrict
             // 
             txtDistrict.EditValue = "0";
-            txtDistrict.Location = new Point(359, 55);
+            txtDistrict.Location = new Point(395, 55);
             txtDistrict.MenuManager = barManager1;
             txtDistrict.Name = "txtDistrict";
             txtDistrict.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             txtDistrict.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
             txtDistrict.Properties.MaskSettings.Set("mask", "d");
-            txtDistrict.Size = new Size(310, 28);
+            txtDistrict.Size = new Size(346, 28);
             txtDistrict.StyleController = layoutControl1;
             txtDistrict.TabIndex = 0;
             // 
@@ -474,15 +474,15 @@
             Root.GroupBordersVisible = false;
             Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlItem2, layoutControlItem3, layoutControlItem4, layoutControlItem5, emptySpaceItem2, layoutControlItem14, layoutControlItem15, layoutControlItem16, layoutControlItem17, layoutControlItem18, layoutControlItem19, layoutControlItem20, layoutControlItem21, layoutControlItem22, layoutControlItem23, layoutControlItem24, emptySpaceItem3, layoutControlItem12 });
             Root.Name = "Root";
-            Root.Size = new Size(716, 388);
+            Root.Size = new Size(788, 432);
             Root.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             layoutControlItem1.Control = txtDistrict;
-            layoutControlItem1.Location = new Point(347, 43);
+            layoutControlItem1.Location = new Point(383, 43);
             layoutControlItem1.Name = "layoutControlItem1";
-            layoutControlItem1.Size = new Size(349, 32);
+            layoutControlItem1.Size = new Size(385, 32);
             layoutControlItem1.Text = "ناحیه";
             layoutControlItem1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem1.TextSize = new Size(30, 19);
@@ -493,7 +493,7 @@
             layoutControlItem2.Control = txtGozar;
             layoutControlItem2.Location = new Point(0, 43);
             layoutControlItem2.Name = "layoutControlItem2";
-            layoutControlItem2.Size = new Size(347, 32);
+            layoutControlItem2.Size = new Size(383, 32);
             layoutControlItem2.Text = "ګذر";
             layoutControlItem2.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem2.TextSize = new Size(22, 19);
@@ -502,9 +502,9 @@
             // layoutControlItem3
             // 
             layoutControlItem3.Control = txtBlock;
-            layoutControlItem3.Location = new Point(347, 75);
+            layoutControlItem3.Location = new Point(383, 75);
             layoutControlItem3.Name = "layoutControlItem3";
-            layoutControlItem3.Size = new Size(349, 32);
+            layoutControlItem3.Size = new Size(385, 32);
             layoutControlItem3.Text = "بلاک";
             layoutControlItem3.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem3.TextSize = new Size(28, 19);
@@ -515,7 +515,7 @@
             layoutControlItem4.Control = txtPropertyNo;
             layoutControlItem4.Location = new Point(0, 75);
             layoutControlItem4.Name = "layoutControlItem4";
-            layoutControlItem4.Size = new Size(347, 32);
+            layoutControlItem4.Size = new Size(383, 32);
             layoutControlItem4.Text = "ملکیت شمېره";
             layoutControlItem4.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem4.TextSize = new Size(71, 19);
@@ -524,9 +524,9 @@
             // layoutControlItem5
             // 
             layoutControlItem5.Control = txtUnit;
-            layoutControlItem5.Location = new Point(347, 107);
+            layoutControlItem5.Location = new Point(383, 107);
             layoutControlItem5.Name = "layoutControlItem5";
-            layoutControlItem5.Size = new Size(349, 32);
+            layoutControlItem5.Size = new Size(385, 32);
             layoutControlItem5.Text = "واحد";
             layoutControlItem5.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem5.TextSize = new Size(27, 19);
@@ -538,7 +538,7 @@
             emptySpaceItem2.Location = new Point(0, 139);
             emptySpaceItem2.MinSize = new Size(104, 24);
             emptySpaceItem2.Name = "emptySpaceItem2";
-            emptySpaceItem2.Size = new Size(696, 26);
+            emptySpaceItem2.Size = new Size(768, 70);
             emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             emptySpaceItem2.TextSize = new Size(0, 0);
             // 
@@ -547,25 +547,25 @@
             layoutControlItem14.Control = labelControl1;
             layoutControlItem14.Location = new Point(0, 0);
             layoutControlItem14.Name = "layoutControlItem14";
-            layoutControlItem14.Size = new Size(696, 43);
+            layoutControlItem14.Size = new Size(768, 43);
             layoutControlItem14.TextSize = new Size(0, 0);
             layoutControlItem14.TextVisible = false;
             // 
             // layoutControlItem15
             // 
             layoutControlItem15.Control = labelControl2;
-            layoutControlItem15.Location = new Point(0, 165);
+            layoutControlItem15.Location = new Point(0, 209);
             layoutControlItem15.Name = "layoutControlItem15";
-            layoutControlItem15.Size = new Size(696, 43);
+            layoutControlItem15.Size = new Size(768, 43);
             layoutControlItem15.TextSize = new Size(0, 0);
             layoutControlItem15.TextVisible = false;
             // 
             // layoutControlItem16
             // 
             layoutControlItem16.Control = txtCategory;
-            layoutControlItem16.Location = new Point(347, 208);
+            layoutControlItem16.Location = new Point(383, 252);
             layoutControlItem16.Name = "layoutControlItem16";
-            layoutControlItem16.Size = new Size(349, 32);
+            layoutControlItem16.Size = new Size(385, 32);
             layoutControlItem16.Text = "کټکوري";
             layoutControlItem16.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem16.TextSize = new Size(42, 19);
@@ -574,9 +574,9 @@
             // layoutControlItem17
             // 
             layoutControlItem17.Control = txtPropertyType;
-            layoutControlItem17.Location = new Point(0, 208);
+            layoutControlItem17.Location = new Point(0, 252);
             layoutControlItem17.Name = "layoutControlItem17";
-            layoutControlItem17.Size = new Size(347, 32);
+            layoutControlItem17.Size = new Size(383, 32);
             layoutControlItem17.Text = "د سیمي ډول";
             layoutControlItem17.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem17.TextSize = new Size(67, 19);
@@ -585,9 +585,9 @@
             // layoutControlItem18
             // 
             layoutControlItem18.Control = txtFloorNums;
-            layoutControlItem18.Location = new Point(347, 240);
+            layoutControlItem18.Location = new Point(383, 284);
             layoutControlItem18.Name = "layoutControlItem18";
-            layoutControlItem18.Size = new Size(349, 32);
+            layoutControlItem18.Size = new Size(385, 32);
             layoutControlItem18.Text = "د منازلو تعداد";
             layoutControlItem18.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem18.TextSize = new Size(75, 19);
@@ -596,9 +596,9 @@
             // layoutControlItem19
             // 
             layoutControlItem19.Control = txtSquareMeter;
-            layoutControlItem19.Location = new Point(0, 240);
+            layoutControlItem19.Location = new Point(0, 284);
             layoutControlItem19.Name = "layoutControlItem19";
-            layoutControlItem19.Size = new Size(347, 32);
+            layoutControlItem19.Size = new Size(383, 32);
             layoutControlItem19.Text = "متر مکعب";
             layoutControlItem19.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem19.TextSize = new Size(53, 19);
@@ -607,9 +607,9 @@
             // layoutControlItem20
             // 
             layoutControlItem20.Control = txtMapWaze;
-            layoutControlItem20.Location = new Point(347, 272);
+            layoutControlItem20.Location = new Point(383, 316);
             layoutControlItem20.Name = "layoutControlItem20";
-            layoutControlItem20.Size = new Size(349, 32);
+            layoutControlItem20.Size = new Size(385, 32);
             layoutControlItem20.Text = "د نقشې وېزه";
             layoutControlItem20.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem20.TextSize = new Size(66, 19);
@@ -618,9 +618,9 @@
             // layoutControlItem21
             // 
             layoutControlItem21.Control = txtTaxPercentage;
-            layoutControlItem21.Location = new Point(0, 272);
+            layoutControlItem21.Location = new Point(0, 316);
             layoutControlItem21.Name = "layoutControlItem21";
-            layoutControlItem21.Size = new Size(347, 32);
+            layoutControlItem21.Size = new Size(383, 32);
             layoutControlItem21.Text = "ټکس فیصدي";
             layoutControlItem21.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem21.TextSize = new Size(72, 19);
@@ -629,9 +629,9 @@
             // layoutControlItem22
             // 
             layoutControlItem22.Control = txtTax;
-            layoutControlItem22.Location = new Point(347, 304);
+            layoutControlItem22.Location = new Point(383, 348);
             layoutControlItem22.Name = "layoutControlItem22";
-            layoutControlItem22.Size = new Size(349, 32);
+            layoutControlItem22.Size = new Size(385, 32);
             layoutControlItem22.Text = "ټکس";
             layoutControlItem22.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem22.TextSize = new Size(26, 19);
@@ -640,9 +640,9 @@
             // layoutControlItem23
             // 
             layoutControlItem23.Control = txtPlanNo;
-            layoutControlItem23.Location = new Point(0, 304);
+            layoutControlItem23.Location = new Point(0, 348);
             layoutControlItem23.Name = "layoutControlItem23";
-            layoutControlItem23.Size = new Size(347, 32);
+            layoutControlItem23.Size = new Size(383, 32);
             layoutControlItem23.Text = "د پلان په اساس شمېره";
             layoutControlItem23.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem23.TextSize = new Size(119, 19);
@@ -651,9 +651,9 @@
             // layoutControlItem24
             // 
             layoutControlItem24.Control = txtAwazeNo;
-            layoutControlItem24.Location = new Point(347, 336);
+            layoutControlItem24.Location = new Point(383, 380);
             layoutControlItem24.Name = "layoutControlItem24";
-            layoutControlItem24.Size = new Size(349, 32);
+            layoutControlItem24.Size = new Size(385, 32);
             layoutControlItem24.Text = "آوېز نمبر";
             layoutControlItem24.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem24.TextSize = new Size(46, 19);
@@ -662,9 +662,9 @@
             // emptySpaceItem3
             // 
             emptySpaceItem3.AllowHotTrack = false;
-            emptySpaceItem3.Location = new Point(0, 336);
+            emptySpaceItem3.Location = new Point(0, 380);
             emptySpaceItem3.Name = "emptySpaceItem3";
-            emptySpaceItem3.Size = new Size(347, 32);
+            emptySpaceItem3.Size = new Size(383, 32);
             emptySpaceItem3.TextSize = new Size(0, 0);
             // 
             // layoutControlItem12
@@ -672,7 +672,7 @@
             layoutControlItem12.Control = txtRemarks;
             layoutControlItem12.Location = new Point(0, 107);
             layoutControlItem12.Name = "layoutControlItem12";
-            layoutControlItem12.Size = new Size(347, 32);
+            layoutControlItem12.Size = new Size(383, 32);
             layoutControlItem12.Text = "تبصره";
             layoutControlItem12.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
             layoutControlItem12.TextSize = new Size(31, 19);
@@ -682,7 +682,7 @@
             // 
             Appearance.Options.UseFont = true;
             AutoScaleMode = AutoScaleMode.None;
-            ClientSize = new Size(716, 423);
+            ClientSize = new Size(788, 467);
             Controls.Add(layoutControl1);
             Controls.Add(barDockControlLeft);
             Controls.Add(barDockControlRight);
